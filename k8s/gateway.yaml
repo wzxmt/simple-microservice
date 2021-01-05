@@ -6,7 +6,7 @@ metadata:
   namespace: ms 
 spec:
   rules:
-    - host: gateway.ctnrs.com 
+    - host: gateway.wzxmt.com 
       http:
         paths:
         - path: /
@@ -53,9 +53,6 @@ spec:
         ports:
           - protocol: TCP
             containerPort: 9999 
-        env:
-          - name: JAVA_OPTS
-            value: "-Xmx1g"
         resources:
           requests:
             cpu: 0.5
