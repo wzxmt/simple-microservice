@@ -15,8 +15,9 @@ MySQL - 5.6.43 : Database - tb_product
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`tb_product` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
+use tb_product;
 /*Table structure for table `product` */
-USE tb_product;
+
 CREATE TABLE `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `product_name` varchar(100) DEFAULT NULL COMMENT '商品名称',

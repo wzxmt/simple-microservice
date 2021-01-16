@@ -1,7 +1,7 @@
 #!/bin/bash
 
-docker_registry=192.168.31.70
-kubectl create secret docker-registry registry-pull-secret --docker-server=$docker_registry --docker-username=admin --docker-password=Harbor12345 --docker-email=admin@ctnrs.com -n ms
+docker_registry=https://harbor.wzxmt.com
+kubectl create secret docker-registry registry-pull-secret --docker-server=$docker_registry --docker-username=admin --docker-password=admin --docker-email=admin@ctnrs.com -n ms
 
 service_list="eureka-service gateway-service order-service product-service stock-service portal-service"
 service_list=${1:-${service_list}}
@@ -17,7 +17,7 @@ for service in $service_list; do
       cd ${service}-biz
    fi
    service=${service%-*}
-   image_name=$docker_registry/microservice/${service}:$(date +%F-%H-%M-%S)
+   image_name=$docker_registry/app/${service}:$(date +%F-%H-%M-%S)
    docker build -t ${image_name} .
    docker push ${image_name} 
    sed -i -r "s#(image: )(.*)#\1$image_name#" ${current_dir}/${service}.yaml

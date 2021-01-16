@@ -3,7 +3,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: eureka 
-  namespace: ms 
+  namespace: infra 
 spec:
   rules:
     - host: eureka.ctnrs.com 
@@ -18,14 +18,14 @@ apiVersion: v1
 kind: Service
 metadata:
   name: eureka
-  namespace: ms
+  namespace: infra
 spec:
   clusterIP: None
   ports:
   - port: 8888
     name: eureka 
   selector:
-    project: ms
+    project: infra
     app: eureka
 
 ---
@@ -34,25 +34,25 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: eureka
-  namespace: ms 
+  namespace: infra 
 spec:
   replicas: 3
   selector:
     matchLabels:
-      project: ms
+      project: infra
       app: eureka
   serviceName: "eureka"
   template:
     metadata:
       labels:
-        project: ms 
+        project: infra 
         app: eureka
     spec:
       imagePullSecrets:
       - name: registry-pull-secret
       containers:
       - name: eureka
-        image: 192.168.31.70/microservice/eureka:2019-07-10-21-33-14
+        image: harbor.wzxmt.com/infra/eureka:20210111_0001
         ports:
           - protocol: TCP
             containerPort: 8888

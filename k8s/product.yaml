@@ -19,7 +19,7 @@ spec:
       - name: registry-pull-secret
       containers:
       - name: product
-        image: 192.168.31.70/microservice/product:2019-07-10-21-34-34
+        image: harbor.wzxmt.com/app/product:20210111_0001
         imagePullPolicy: Always
         ports:
           - protocol: TCP

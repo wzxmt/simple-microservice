@@ -5,7 +5,7 @@ metadata:
   namespace: ms 
 spec:
   rules:
-    - host: portal.ctnrs.com 
+    - host: portal.wzxmt.com 
       http:
         paths:
         - path: /
@@ -47,7 +47,7 @@ spec:
       - name: registry-pull-secret
       containers:
       - name: portal
-        image: 192.168.31.70/microservice/portal:2019-07-10-21-35-13
+        image: harbor.wzxmt.com/app/portal:20210111_0001
         imagePullPolicy: Always
         ports:
           - protocol: TCP

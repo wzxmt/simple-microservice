@@ -35,7 +35,7 @@ $(function () {
           //layer.msg('正在下单', {icon: 1});
           $.ajax({
             type: "POST",
-            url: "http://gateway.wzxmt.com/order/submitOrder",
+            url: "http://gateway.ctnrs.com/order/submitOrder",
             data: {productId: data.id, orderProductName: data.productName,orderPrice:data.price,count:1},
             dataType: "json",
             beforeSend:function(XMLHttpRequest){

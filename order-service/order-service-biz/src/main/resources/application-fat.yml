@@ -13,3 +13,10 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka-0.eureka.infra.svc.cluster.local:8888/eureka,http://eureka-1.eureka.infra.svc.cluster.local:8888/eureka,http://eureka-2.eureka.infra.svc.cluster.local:8888/eureka
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
