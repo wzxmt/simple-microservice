@@ -1,8 +1,8 @@
 >## 这是一个基于SpringCloud的微服务架构项目
 
-- dev数据库： dev-mysql.wzxmt.com
+- dev数据库： dev-mysql.ctnrs.com
 
-- fat数据库：fat-mysql.wzxmt.com
+- fat数据库：fat-mysql.ctnrs.com
 - 网关服务：gateway.ctnrs.com
 - eureka服务：eureka.ctnrs.com
 - 微服务：portal.ctnrs.com
