@@ -19,7 +19,7 @@ spec:
       - name: registry-pull-secret
       containers:
       - name: order
-        image: registry.wzxmt.com/microservice/order:2019-07-10-21-34-08
+        image: registry.wzxmt.com/microservice/order:latest
         imagePullPolicy: Always
         ports:
           - protocol: TCP

@@ -47,7 +47,7 @@ spec:
       - name: registry-pull-secret
       containers:
       - name: gateway
-        image: registry.wzxmt.com/microservice/gateway:2019-07-10-21-26-23
+        image: registry.wzxmt.com/microservice/gateway:latest
         imagePullPolicy: Always
         ports:
           - protocol: TCP

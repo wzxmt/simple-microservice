@@ -19,7 +19,7 @@ spec:
       - name: registry-pull-secret
       containers:
       - name: stock
-        image: registry.wzxmt.com/microservice/stock:2019-07-10-20-41-44
+        image: registry.wzxmt.com/microservice/stock:latest
         imagePullPolicy: Always
         ports:
           - protocol: TCP

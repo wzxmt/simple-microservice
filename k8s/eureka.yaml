@@ -51,7 +51,7 @@ spec:
       - name: registry-pull-secret
       containers:
       - name: eureka
-        image: registry.wzxmt.com/microservice/eureka:2019-07-10-21-33-14
+        image: registry.wzxmt.com/microservice/eureka:latest
         ports:
           - protocol: TCP
             containerPort: 8888
