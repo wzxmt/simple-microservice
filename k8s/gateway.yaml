@@ -1,21 +1,17 @@
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
 metadata:
-  name: gateway 
-  namespace: ms 
+  name: gateway
+  namespace: ms
 spec:
-  rules:
-    - host: gateway.ctnrs.com 
-      http:
-        paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service: 
-              name: gateway
-              port: 
-                number: 9999
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`gateway.ctnrs.com`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: gateway
+      port: 9999
 ---
 apiVersion: v1
 kind: Service
