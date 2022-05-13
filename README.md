@@ -1,5 +1,7 @@
 >## 这是一个基于SpringCloud的微服务架构项目
 
+dev数据库： dev-mysql.wzxmt.com
+fat数据库：fat-mysql.wzxmt.com
 >## 部署须知
 1. 导入db目录下数据库文件到自己的MySQL服务器
 2. 修改配置环境（xxx-service/src/main/resources/application.yml，active值决定启用环境配置文件）
