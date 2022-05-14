@@ -24,6 +24,6 @@ for service in $service_list; do
    docker build -t ${image_name} .
    docker push ${image_name} 
    # 修改yaml中镜像地址为新推送的，并apply
-   sed -i -r "s#(image: )(.*)#\1$image_name#" ${current_dir}/${service}.yaml
-   kubectl apply -f ${current_dir}/${service}.yaml
+   #sed -i -r "s#(image: )(.*)#\1$image_name#" ${current_dir}/${service}.yaml
+   #kubectl apply -f ${current_dir}/${service}.yaml
 done
