@@ -2,6 +2,8 @@
 
 docker_registry=registry.wzxmt.com
 image_tag=latest
+
+kubectl create ns ms
 # 存储登录Harbor认证信息
 kubectl create secret docker-registry registry-pull-secret --docker-server=$docker_registry --docker-username=admin --docker-password=admin -n ms
 
