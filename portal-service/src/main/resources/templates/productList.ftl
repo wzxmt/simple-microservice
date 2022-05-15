@@ -14,7 +14,7 @@
     <table id="productList" lay-filter="product-filter"></table>
     <!-- 底部固定区域 -->
     <div class="layui-footer">
-        &nbsp;&nbsp;&nbsp;阿良教育 www.aliangedu.cn
+        &nbsp;&nbsp;&nbsp;旺仔小馒头 wzxmt
     </div>
 </div>
 

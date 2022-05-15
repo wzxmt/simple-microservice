@@ -1,5 +1,5 @@
 FROM lizhenliang/java:8-jdk-alpine
-LABEL maintainer www.ctnrs.com
+LABEL maintainer www.cnblogs.com/wzxmt
 ENV JAVA_ARGS="-Dfile.encoding=UTF8 -Duser.timezone=GMT+08"
 COPY ./target/gateway-service.jar ./
 COPY pinpoint /pinpoint

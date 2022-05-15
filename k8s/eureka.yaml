@@ -62,13 +62,13 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.name
-        resources:
-          requests:
-            cpu: 0.5
-            memory: 256Mi
-          limits:
-            cpu: 1 
-            memory: 1Gi
+        # resources:
+        #   requests:
+        #     cpu: 0.5
+        #     memory: 256Mi
+        #   limits:
+        #     cpu: 1 
+        #     memory: 1Gi
         readinessProbe:
           tcpSocket:
             port: 8888

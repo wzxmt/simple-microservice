@@ -1,5 +1,5 @@
 /**
- * <p>Company: http://www.ctnrs.com</p>
+ * <p>Company: http://www.cnblogs.com/wzxmt</p>
  * <p>Copyright: Copyright (c) 2019</p>
  */
 package com.ctnrs.product.api.constant;
