@@ -14,7 +14,7 @@ MySQL - 5.6.43 : Database - tb_product
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`tb_product` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-
+USE tb_product;
 /*Table structure for table `product` */
 
 CREATE TABLE `product` (
